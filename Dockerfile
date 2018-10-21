@@ -10,4 +10,6 @@ RUN npm install
 
 COPY . /code
 
+RUN npm run build
+
 CMD [ "npm", "start" ]
