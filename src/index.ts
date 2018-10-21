@@ -141,7 +141,7 @@ class ServerListBot {
       throw new Error(`Source channel is not found`)
     }
     if (isTextChannel(channel)) {
-      const msgs = await channel.fetchPinnedMessages()
+      const msgs = await channel.fetchMessages()
       const msg = msgs.last()
       const content = msg.content
       let re = /(\d+)\)\s*([0-9a-zA-Z:\-\.]+)\s*(.*?)\s*$/mg
