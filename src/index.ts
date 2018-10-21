@@ -206,7 +206,7 @@ class ServerListBot {
       channel.startTyping()
     }, TypingTimeout)
     const r = await p
-    channel.stopTyping()
+    channel.stopTyping(true)
     clearTimeout(id)
     return r
   }
